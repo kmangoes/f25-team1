@@ -1,0 +1,5 @@
+## notes for customer usage management screen (cstmer_manage-screen.html)
+
+    - make background gradient slightly darker to denote different interface
+    - make buttons cream/light coffee color so they stand out against background    color, with slight shadowed border
+    - use same font family across all screens 
