@@ -1,0 +1,41 @@
+html{
+    margin: 0; 
+    height: 100%; 
+}
+body {
+    font-family: Cinzel Decorative serif, Cinzel, serif;
+    background: linear-gradient(180deg, #8e704d, #382818);
+    display: grid;
+    grid-template-rows: 85px 1fr;
+    grid-template-columns: 50% 45%; 
+    width: 98%;
+    height: 90%;  
+    gap: 25px; 
+}
+
+#top_bar {
+    width: 25%; 
+    padding: 10px; 
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    color: black; 
+    background-color: #d7ccba;
+    border-radius: 4px;
+    text-align: center;
+}
+#account_list {
+    height: 80vh; 
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-width: 2px;
+    border-style: solid; 
+    border-color: white; 
+}
+#account_details {
+    height: 80vh; 
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-width: 2px;
+    border-style: solid; 
+    border-color: white; 
+}
