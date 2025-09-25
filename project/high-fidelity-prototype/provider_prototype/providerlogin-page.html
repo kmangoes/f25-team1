@@ -78,13 +78,26 @@
     <div id="login-form">
       <h2>Cafe Quest</h2>
       <h3>Provider Login </h3>
-      <input type="email" placeholder="Provider Email" required>
-      <input type="password" placeholder="Admin Password" required>
-      <button>Login</button>
+      <input type="email" id="emailInput" placeholder="Provider Email" required>
+      <input type="password" id="passInput" placeholder="Admin Password" required>
+      <button onclick="checkLogin()">Login</button>
       <div class="toggle-text">
         Looking for user login? <a href="../customer_prototype/loginpage.html">User Login</a>
       </div>
     </div>
+    <script>
+      function checkLogin() {
+        const email1 = "sp24lights@gmail.com";
+        const email2 = "hiwetet@gmail.com";
+        const pass = "admin123";
+        const password = document.getElementById("passInput").value;
+        const email = document.getElementById("emailInput").value;
+
+        if ((email == email1 || email == email2) && password == pass) {
+          window.location.href ="cstmer_manage-screen.html";
+        }
+      }
+    </script>
 
     <!-- Signup Form -->
     <div id="signup-form" style="display: none;">

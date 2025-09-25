@@ -1,0 +1,150 @@
+html{
+    margin: 0; 
+    height: 100%; 
+}
+body {
+            font-family: Cinzel Decorative serif, Cinzel, serif;
+            background: linear-gradient(180deg, #8e704d, #382818);
+            display: grid;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 55% 22.5% 22.5%;
+            gap: 35px;
+            width: 95%;
+            height: 90%; 
+            padding: 3%; 
+    }
+.container {
+            background-color: #c8ae81;
+            border-radius: 3px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            padding: 20px;
+    }
+h2 {
+            color: black;
+    }
+.reviews {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 8px; 
+}
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+th {
+            background-color: #f4f4f4;
+        }
+.button {
+            text-align: center;
+            justify-content: center;
+            margin: 30px auto;
+            height: 50px; 
+            width: 90%;
+            background-color: #d7ccba;
+            padding-top: 7px; 
+            color: black;
+            border-style: solid;
+            border-radius: 4px; 
+            border-width: 2px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            transition: background 1.0s;
+    }
+.button:hover {
+            transform: translateY(-3px);
+    }
+.button:active {
+            transform: translateY(0px);
+    }
+
+
+#sidebar {
+    grid-column:1 / 2;
+    grid-row: 1 / 2;
+}
+#main_content {
+    display: grid;
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;
+    grid-template-columns: 400px 1fr; 
+}
+#bottom_content1 {
+    display: flex;
+    grid-column: 2 / 3; 
+    grid-row:2 / 3;
+    align-items: flex-start;
+}
+#bottom_content2 {
+    display:flex;
+    grid-column: 2 / 3; 
+    grid-row:3 / 4;
+    align-items: flex-start;   /* top-align items */
+    justify-content: space-between; 
+}
+#customer_accts {
+    width: 40%;
+    margin-left: 10px; 
+    padding-bottom: 0; 
+    margin-top: 23px;
+}
+#manage_events {
+    width: 40%;
+    margin-left: 10px; 
+    padding-bottom: 0; 
+    margin-top: 23px;    
+}
+#notif1,#notif2 {
+    font-weight:bold;
+    padding-right: 25px;
+}
+#notif1:hover,#notif2:hover{
+    transform: translateY(-3px);
+}
+.shake{
+    font-weight:bold;
+    padding-right:25px;
+}
+.shake:hover{
+    animation: shake 0.4s ease-in-out;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+#coffee_logo {
+    margin: 0;
+    padding: 0; 
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    overflow: hidden; 
+}
+#review_summary {
+    font-weight: bold;
+    grid-column: 1 /2 ;
+    padding: 75px;
+}
+.coffee_img {
+    width: 100%;
+    height: 100%;
+}
+.scroll_box {
+    grid-column:2 / 3;
+    height: 90%;
+    margin-right: 25px;
+    padding: 7px;
+    border: 1px solid black;
+    background-color: #d7ccba;   
+    overflow-y: auto;      /* enables vertical scrolling */
+    overflow-x: hidden;    /* prevent horizontal scroll */
+}
