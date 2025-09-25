@@ -14,14 +14,20 @@ body {
             padding: 3%; 
     }
 .container {
-            background-color: #d7ccba;
+            background-color: #c8ae81;
             border-radius: 3px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
             padding: 20px;
     }
 h2 {
-            color: #003366;
+            color: black;
     }
+.reviews {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 8px; 
+}
 table {
             width: 100%;
             border-collapse: collapse;
@@ -61,11 +67,13 @@ th {
 
 #sidebar {
     grid-column:1 / 2;
-    grid-row: 1 / 4;
+    grid-row: 1 / 2;
 }
 #main_content {
+    display: grid;
     grid-column: 2 / 3; 
     grid-row: 1 / 2;
+    grid-template-columns: 400px 1fr; 
 }
 #bottom_content1 {
     display: flex;
@@ -92,10 +100,51 @@ th {
     padding-bottom: 0; 
     margin-top: 23px;    
 }
-#event_notif1, #customer_notif1 {
+#notif1,#notif2 {
     font-weight:bold;
-    padding-right: 50px;
+    padding-right: 25px;
 }
-#event_notif1:hover, #customer_notif1:hover {
+#notif1:hover,#notif2:hover{
     transform: translateY(-3px);
+}
+.shake{
+    font-weight:bold;
+    padding-right:25px;
+}
+.shake:hover{
+    animation: shake 0.4s ease-in-out;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+#coffee_logo {
+    margin: 0;
+    padding: 0; 
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    overflow: hidden; 
+}
+#review_summary {
+    font-weight: bold;
+    grid-column: 1 /2 ;
+    padding: 75px;
+}
+.coffee_img {
+    width: 100%;
+    height: 100%;
+}
+.scroll_box {
+    grid-column:2 / 3;
+    height: 90%;
+    margin-right: 25px;
+    padding: 7px;
+    border: 1px solid black;
+    background-color: #d7ccba;   
+    overflow-y: auto;      /* enables vertical scrolling */
+    overflow-x: hidden;    /* prevent horizontal scroll */
 }
