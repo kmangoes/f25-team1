@@ -33,19 +33,18 @@ Cafe Quest is a web application designed specifically for UNCG students (at this
 
 ### 2.2 Use Case Descriptions
 
-#### 2.2.1 Actor: Farmer
-##### 2.2.1.1 Sign Up
-A farmer can sign up to create their profile with their name, email, password, and phone number. Emails must be unique.
-##### 2.2.1.2 Log In
-A farmer shall be able to sign in using their registred email and password. After logging in, the farmer shall be directed their dashboard where they see an overview of their farm, boxes and stats.
-##### 2.2.1.3 Update Profile
+#### 2.2.1 Actor: Provider
+##### 2.2.1.1 Log In
+Admin login will have a designated page (that will be, in most cases, inaccessible to users), with a fixed password, as well as valid admin email(s). There is no sign-up option on the provider side.
+##### 2.2.1.2 View Customer View
 A farmer shall be to modify their profile by going to their profile page. They can change their email, password, and farm.
-##### 2.2.1.4 Create Produce Boxes
+##### 2.2.1.3 View Event Stats
 The farmer shall be able to create a new produce box listing. They would provide a box name, description, and price. This box will be created to be associated with only this farmer and their farm.
 ##### 2.2.1.4 View Customer Stats
-A farmer will be able to view several statistics such as total revenue, total subscribers, and average ratings.
+A farmer will be able to view several statistics such as total revenue, total subscribers, and average ratings.  
+##### 2.2.1.5 View Customer Reviews  
 
-#### 2.2.2 Actor: Customer
+#### 2.2.2 Actor: Cafe Quest User
 ##### 2.2.2.1 Sign Up
 A customer can sign up to create their profile with their name, email, password, and address. Emails must be unique.
 ##### 2.2.2.2 Log In
@@ -61,3 +60,4 @@ A customer may write a review for a box they subscribed to. They will be able to
 ![UML Class Diagram](https://github.com/csc340-uncg/f25-team0/blob/main/doc/Object-Oriented-Design/class-diagram.png)
 ## 4. Database Schema
 ![UML Class Diagram](https://github.com/csc340-uncg/f25-team0/blob/main/doc/Object-Oriented-Design/schema.png)
+
