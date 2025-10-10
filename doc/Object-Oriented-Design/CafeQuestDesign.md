@@ -29,7 +29,7 @@ Cafe Quest is a web application designed specifically for UNCG students (at this
 
 ## 2. Use Cases
 ### 2.1 Use Case Model
-![Use Case Model](https://github.com/csc340-uncg/f25-team0/blob/main/doc/Object-Oriented-Design/use-case.png)
+<img width="853" height="580" alt="image" src="https://github.com/user-attachments/assets/018fdacd-a8a6-4117-8a44-68a0428e6dd7" />
 
 ### 2.2 Use Case Descriptions
 
