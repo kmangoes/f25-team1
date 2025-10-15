@@ -20,7 +20,7 @@ Table of Contents
 ## Revision History
 | Name | Date    | Reason For Changes  | Version   |
 | ---- | ------- | ------------------- | --------- |
-|  Al  |10/9     | Initial Design      |    1      |
+|  Vl  |  10/9   |   Initial Design    |     1     |
 |      |         |                     |           |
 |      |         |                     |           |
 
@@ -37,12 +37,15 @@ Cafe Quest is a web application designed specifically for UNCG students (at this
 ##### 2.2.1.1 Log In
 Admin login will have a designated page (that will be, in most cases, inaccessible to users), with a fixed password, as well as valid admin email(s). There is no sign-up option on the provider side.
 ##### 2.2.1.2 View Customer View
-A farmer shall be to modify their profile by going to their profile page. They can change their email, password, and farm.
+A provider has access to what the current customer interface looks like.
 ##### 2.2.1.3 View Event Stats
-The farmer shall be able to create a new produce box listing. They would provide a box name, description, and price. This box will be created to be associated with only this farmer and their farm.
+Provider can view upcoming events, ordered based on relevance (the closer to the event date, the higher up they will appear), how many users have reserved spots at the event, where it is being hosted, etc.  
+A provider can also edit or remove events as needed. 
 ##### 2.2.1.4 View Customer Stats
-A farmer will be able to view several statistics such as total revenue, total subscribers, and average ratings.  
+Provider can view a comprehensive list of all users. Providers have limited access to modification of user profiles given the scope of the provider role for this application, but they can remove users as needed.  
+A short breakdown is provided, displaying statistics such as newly-created accounts.
 ##### 2.2.1.5 View Customer Reviews  
+Provider can view and manage customer reviews. A more in-depth breakdown is given for reviews, highlighting recent reviews and higher/lower-rating ones.
 
 #### 2.2.2 Actor: Cafe Quest User
 ##### 2.2.2.1 Sign Up
