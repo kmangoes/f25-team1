@@ -63,5 +63,4 @@ A customer may write a review for a box they subscribed to. They will be able to
 ![UML Class Diagram](https://github.com/kmangoes/f25-team1/blob/cSolano-milestone4/doc/Object-Oriented-Design/designDocUML.png)
 
 ## 4. Database Schema
-![UML Class Diagram]()
-
+![UML Class Diagram](https://github.com/kmangoes/f25-team1/blob/main/doc/Object-Oriented-Design/designdoc_schema.png)
