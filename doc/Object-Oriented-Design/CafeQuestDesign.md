@@ -12,8 +12,8 @@ Table of Contents
 * 2 [Use Cases](#2-use-cases)
   * 2.1 [Use Case Model](#21-use-case-model)
   * 2.2 [Use Case Descriptions](#22-use-case-descriptions)
-    * 2.2.1 [Actor: Farmer](#221-actor-farmer)
-    * 2.2.2 [Actor: Customer](#222-actor-customer) 
+    * 2.2.1 [Actor: User](#221-actor-farmer)
+    * 2.2.2 [Actor: Provider](#222-actor-customer) 
 * 3 [UML Class Diagram](#3-uml-class-diagram)
 * 4 [Database Schema](#4-database-schema)
 
@@ -60,7 +60,7 @@ Upon selecting a box, a customer shall be able to subscribe for the box using a 
 A customer may write a review for a box they subscribed to. They will be able to rate the box based on freshness and delivery.
 
 ## 3. UML Class Diagram
-![UML Class Diagram](https://github.com/csc340-uncg/f25-team0/blob/main/doc/Object-Oriented-Design/class-diagram.png)
-## 4. Database Schema
-![UML Class Diagram](https://github.com/csc340-uncg/f25-team0/blob/main/doc/Object-Oriented-Design/schema.png)
+![UML Class Diagram](https://github.com/kmangoes/f25-team1/blob/cSolano-milestone4/doc/Object-Oriented-Design/designDocUML.png)
 
+## 4. Database Schema
+![UML Class Diagram](https://github.com/kmangoes/f25-team1/blob/main/doc/Object-Oriented-Design/designdoc_schema.png)
