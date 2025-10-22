@@ -49,15 +49,15 @@ Provider can view and manage customer reviews. A more in-depth breakdown is give
 
 #### 2.2.2 Actor: Cafe Quest User
 ##### 2.2.2.1 Sign Up
-A customer can sign up to create their profile with their name, email, password, and address. Emails must be unique.
+A new user uses their UNCG Student email address to sign up using a valid @uncg.edu email address that is not already in teh system.
 ##### 2.2.2.2 Log In
-A customer shall be able to sign in using their registred email and password. After logging in, the customer shall be directed their dashboard where they see an overview of their subscriptions.
-##### 2.2.2.3 Browse Produce Boxes
-A customer shall be able to view available produce boxes. They can do this from the home page or using a search function. They can also filter boxes by name, descriptions, or farm. They will also be able to select one box and view more details.
-##### 2.2.1.4 Subscribe to Produce Box
-Upon selecting a box, a customer shall be able to subscribe for the box using a one-click action. This box will then appear on their dashboard, and they will be able to ammend the subscription.
-##### 2.2.1.5 Review Produce Box
-A customer may write a review for a box they subscribed to. They will be able to rate the box based on freshness and delivery.
+After logging in, the user should be able to authenticate and have access to their account to see the home page, their profile, and events page.
+##### 2.2.2.3 Browse Coffee Shops
+Users will be able to see coffee shops near UNCG campus along with viewing details.
+##### 2.2.1.4 View details
+Users can see the list of information of the shop including name, address, hours, contact information and ratings along with upcoming events being held there.
+##### 2.2.1.5 Review and rate coffee shops
+Users can provide ratings and feedback on the coffee shops they visit.
 
 ## 3. UML Class Diagram
 ![UML Class Diagram](https://github.com/kmangoes/f25-team1/blob/cSolano-milestone4/doc/Object-Oriented-Design/designDocUML.png)
