@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface ProviderRepository extends JpaRepository<Provider, Long> {
     
     @Query("SELECT a FROM Provider a WHERE a.name LIKE %?1%")
-    List<Service> getProviderByName(String name);
+    List<Provider> getProviderByName(String name);
 
 }

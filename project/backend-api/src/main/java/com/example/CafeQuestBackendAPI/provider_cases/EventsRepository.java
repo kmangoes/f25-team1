@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ServiceRepository extends JpaRepository<Service, Long> {
+public interface EventsRepository extends JpaRepository<Events, Long> {
 
-    @Query("SELECT a FROM Service a WHERE a.serviceName LIKE %?1%")
-    List<Service> getServiceByName(String serviceName);
+    @Query("SELECT a FROM Service a WHERE a.eventName LIKE %?1%")
+    List<Events> getEventByName(String eventName);
     
 }
