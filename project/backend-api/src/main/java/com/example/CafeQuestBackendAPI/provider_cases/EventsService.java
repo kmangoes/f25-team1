@@ -27,6 +27,4 @@ public void deleteEvent(Long eventId) {
     eventsRepository.deleteById(eventId);
 }
 
-
-
 }

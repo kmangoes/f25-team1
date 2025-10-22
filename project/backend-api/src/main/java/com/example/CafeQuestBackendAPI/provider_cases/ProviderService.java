@@ -11,11 +11,17 @@ public class ProviderService {
 private ProviderRepository providerRepository;
     
 //endpoint mapping methods
+public Object getAllProviders() {
+    return providerRepository.findAll();
+}
 public Provider addProvider(Provider provider) {
     return providerRepository.save(provider);
 }
 public Provider updateProvider(Provider providerId, Provider provider) {
     return providerRepository.save(provider);
+}
+public void deleteProvider(@PathVariable Long providerId) {
+    providerRepository.deleteById(providerId);
 }
 
 
