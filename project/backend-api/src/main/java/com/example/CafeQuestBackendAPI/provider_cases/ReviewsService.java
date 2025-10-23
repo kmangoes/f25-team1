@@ -11,6 +11,20 @@ public class ReviewsService {
 private ReviewsRepository reviewsRepository;
     
 //endpoint mapping methods
-
+public Object getAllReviews() {
+    return reviewsRepository.findAll();
+}
+public Object getReviewById(@PathVariable Long id) {
+    return reviewsRepository.findById(id);
+}
+public Object getReviewByUsername(String userName){
+    return reviewsRepository.getReviewsByUserName(userName);
+}
+public Reviews respondReview(Reviews review) {
+    return reviewsRepository.save(review);
+}
+public void deleteReview(Long reviewId) {
+    reviewsRepository.deleteById(reviewId);
+}
 
 }
