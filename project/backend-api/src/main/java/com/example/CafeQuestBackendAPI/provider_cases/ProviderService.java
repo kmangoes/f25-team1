@@ -17,7 +17,7 @@ public Object getAllProviders() {
 public Provider addProvider(Provider provider) {
     return providerRepository.save(provider);
 }
-public Provider updateProvider(Provider providerId, Provider provider) {
+public Provider updateProvider(Long providerId, Provider provider) {
     return providerRepository.save(provider);
 }
 public void deleteProvider(@PathVariable Long providerId) {

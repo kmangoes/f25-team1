@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,5 +14,22 @@ public class ProviderController {
 
 @Autowired
 private ProviderService providerService;
-    
+
+@GetMapping("/providers")
+public Object getAllProviders() {
+    return providerService.getAllProviders();
+}
+@PostMapping("/providers")
+public Provider addProvider (@RequestBody Provider provider) {
+    return providerService.addProvider(provider);
+}
+@PutMapping("/providers/{providerId}")
+public Provider updateProvider (@PathVariable Long providerId, @RequestBody Provider provider) {
+    return providerService.updateProvider(providerId, provider);
+}
+@DeleteMapping("/providers/{providerId}")
+public void deleteProvider (@PathVariable Long providerId) {
+    providerService.deleteProvider(providerId);
+}
+
 }

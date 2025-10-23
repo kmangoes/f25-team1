@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
  * Provider entity class
  */
 @Entity
-@Table(name="provider")
+@Table(name="providers")
 public class Provider {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
