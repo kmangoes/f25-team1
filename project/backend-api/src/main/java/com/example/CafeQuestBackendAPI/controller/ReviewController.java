@@ -1,4 +1,4 @@
-package com.example.CafeQuestBackendAPI.entity.controller;
+package com.example.CafeQuestBackendAPI.controller;
 
 import com.example.CafeQuestBackendAPI.entity.Review;
 import com.example.CafeQuestBackendAPI.service.ReviewService;
