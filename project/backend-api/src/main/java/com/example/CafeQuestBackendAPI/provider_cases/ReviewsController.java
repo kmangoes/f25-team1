@@ -32,13 +32,12 @@ public Object getReviewByUsername (@RequestParam String userName) {
     }
 }
 @PostMapping("/reviews")
-public Reviews respondReview(@RequestBody Reviews review) {
-    return reviewsService.respondReview(review);
+public Reviews addReview(@RequestBody Reviews review) {
+    return reviewsService.addReview(review);
 }
 @DeleteMapping("/reviews/{reviewId}")
 public void deleteReview(@PathVariable Long reviewId) {
     reviewsService.deleteReview(reviewId);
 }
-
 
 }

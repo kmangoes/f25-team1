@@ -20,7 +20,7 @@ public Object getReviewById(@PathVariable Long id) {
 public Object getReviewByUsername(String userName){
     return reviewsRepository.getReviewsByUserName(userName);
 }
-public Reviews respondReview(Reviews review) {
+public Reviews addReview(Reviews review) {
     return reviewsRepository.save(review);
 }
 public void deleteReview(Long reviewId) {
