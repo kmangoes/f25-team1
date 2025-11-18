@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "reviews")
-public class Reviews {
+public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long reviewId;
@@ -23,15 +23,15 @@ public class Reviews {
     @Column 
     private String reviewDate;
 
-    public Reviews() { } //empty constructor for JPA
+    public Review() { } //empty constructor for JPA
 
-    public Reviews(String userName, String reviewText, int starRating, String reviewDate) {
+    public Review(String userName, String reviewText, int starRating, String reviewDate) {
         this.userName = userName;
         this.reviewText = reviewText;
         this.starRating = starRating;
         this.reviewDate = reviewDate;
     }
-    public Reviews(Long reviewId, String userName, String reviewText, int starRating, String reviewDate) {
+    public Review(Long reviewId, String userName, String reviewText, int starRating, String reviewDate) {
         this.reviewId = reviewId;
         this.userName = userName;
         this.reviewText = reviewText;

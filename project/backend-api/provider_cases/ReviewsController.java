@@ -32,7 +32,7 @@ public Object getReviewByUsername (@RequestParam String userName) {
     }
 }
 @PostMapping("/reviews")
-public Reviews addReview(@RequestBody Reviews review) {
+public Review addReview(@RequestBody Review review) {
     return reviewsService.addReview(review);
 }
 @DeleteMapping("/reviews/{reviewId}")

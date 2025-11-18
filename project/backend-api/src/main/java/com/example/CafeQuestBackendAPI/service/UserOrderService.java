@@ -1,4 +1,4 @@
-package com.example.CafeQuestBackendAPI.entity.service;
+package com.example.CafeQuestBackendAPI.service;
 
 import com.example.CafeQuestBackendAPI.entity.UserOrder;
 import com.example.CafeQuestBackendAPI.entity.User;
