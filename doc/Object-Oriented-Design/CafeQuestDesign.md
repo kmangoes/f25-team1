@@ -1,9 +1,9 @@
 # Cafe Quest - Software Design 
 
-Version 1  
+Version 2  
 Prepared by Chase Solano, Hiwete Teshale  
 Cafe Quest  
-Oct 9, 2025  
+Dec 7, 2025  
 
 Table of Contents
 =================
@@ -21,11 +21,11 @@ Table of Contents
 | Name | Date    | Reason For Changes  | Version   |
 | ---- | ------- | ------------------- | --------- |
 |  Vl  |  10/9   |   Initial Design    |     1     |
-|      |         |                     |           |
+|  V2  |  12/7   |  Finalized Design   |     2     |
 |      |         |                     |           |
 
 ## 1. Product Overview
-Cafe Quest is a web application designed specifically for UNCG students (at this current time) who desire ease of finding third spaces. Cafe Quest offers descriptive suggestions on cafes and study spaces for students to visit, and also schedule group meetups at. All users of Cafe Quest would be UNCG students, verified by a @uncg.edu email.
+Cafe Quest is a web application designed specifically for UNCG students (at this current time) who desire ease of finding third spaces. Cafe Quest offers descriptive suggestions on cafes and study spaces for students to visit, and also schedule group meetups at. All users of Cafe Quest would be UNCG students.
 
 ## 2. Use Cases
 ### 2.1 Use Case Model
@@ -34,30 +34,26 @@ Cafe Quest is a web application designed specifically for UNCG students (at this
 ### 2.2 Use Case Descriptions
 
 #### 2.2.1 Actor: Provider
-##### 2.2.1.1 Log In
-Admin login will have a designated page (that will be, in most cases, inaccessible to users), with a fixed password, as well as valid admin email(s). There is no sign-up option on the provider side.
-##### 2.2.1.2 View Customer View
-A provider has access to what the current customer interface looks like.
-##### 2.2.1.3 View Event Stats
-Provider can view upcoming events, ordered based on relevance (the closer to the event date, the higher up they will appear), how many users have reserved spots at the event, where it is being hosted, etc.  
-A provider can also edit or remove events as needed. 
-##### 2.2.1.4 View Customer Stats
-Provider can view a comprehensive list of all users. Providers have limited access to modification of user profiles given the scope of the provider role for this application, but they can remove users as needed.  
-A short breakdown is provided, displaying statistics such as newly-created accounts.
-##### 2.2.1.5 View Customer Reviews  
-Provider can view and manage customer reviews. A more in-depth breakdown is given for reviews, highlighting recent reviews and higher/lower-rating ones.
+##### 2.2.1.1 Log In/Sign Up 
+Admin login will have a designated page with a fixed password, as well as valid admin email(s). Login will have reCAPTCHA implemented for extra security. 
+##### 2.2.1.2 User Management
+A provider can view all users as well as delete them. 
+##### 2.2.1.3 Cafe Management 
+Providers can add/edit new and existing cafes (a provider-unique capability), delete cafes, navigate to a Google search of the cafe on clicking, and also view all user reviews. 
+##### 2.2.1.4 Event Management:
+Providers can add events and delete them. 
 
 #### 2.2.2 Actor: Cafe Quest User
-##### 2.2.2.1 Sign Up
-A new user uses their UNCG Student email address to sign up using a valid @uncg.edu email address that is not already in teh system.
-##### 2.2.2.2 Log In
-After logging in, the user should be able to authenticate and have access to their account to see the home page, their profile, and events page.
+##### 2.2.2.1 Log In/Sign Up
+A new user uses their UNCG Student email address to sign up using a valid @uncg.edu email address that is not already in teh system. After logging in, the user should be able to authenticate and have access to their account to see the home page, their profile, and events page.
+##### 2.2.2.2 Customize Profile  
+Users can add personalization to their profiles (their major, favorite coffee, etc.) 
 ##### 2.2.2.3 Browse Coffee Shops
 Users will be able to see coffee shops near UNCG campus along with viewing details.
-##### 2.2.1.4 View details
-Users can see the list of information of the shop including name, address, hours, contact information and ratings along with upcoming events being held there.
-##### 2.2.1.5 Review and rate coffee shops
+##### 2.2.2.4 Review and Rate Coffee Shops
 Users can provide ratings and feedback on the coffee shops they visit.
+##### 2.2.2.5 Add/Join/Leave Events
+Users can add, join and leave events created by other users. 
 
 ## 3. UML Class Diagram
 ![UML Class Diagram](https://github.com/kmangoes/f25-team1/blob/cSolano-milestone4/doc/Object-Oriented-Design/designDocUML.png)
