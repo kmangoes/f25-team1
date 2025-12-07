@@ -1,19 +1,20 @@
-package com.example.CafeQuestBackendAPI.entity.service;
-
-import com.example.CafeQuestBackendAPI.entity.Event;
-import com.example.CafeQuestBackendAPI.entity.EventAttendee;
-import com.example.CafeQuestBackendAPI.entity.User;
-import com.example.CafeQuestBackendAPI.entity.CoffeeShop;
-import com.example.CafeQuestBackendAPI.repository.EventRepository;
-import com.example.CafeQuestBackendAPI.repository.EventAttendeeRepository;
-import com.example.CafeQuestBackendAPI.repository.UserRepository;
-import com.example.CafeQuestBackendAPI.repository.CoffeeShopRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package com.example.CafeQuestBackendAPI.service;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.CafeQuestBackendAPI.entity.CoffeeShop;
+import com.example.CafeQuestBackendAPI.entity.Event;
+import com.example.CafeQuestBackendAPI.entity.EventAttendee;
+import com.example.CafeQuestBackendAPI.entity.User;
+import com.example.CafeQuestBackendAPI.repository.CoffeeShopRepository;
+import com.example.CafeQuestBackendAPI.repository.EventAttendeeRepository;
+import com.example.CafeQuestBackendAPI.repository.EventRepository;
+import com.example.CafeQuestBackendAPI.repository.UserRepository;
 
 @Service
 public class EventService {

@@ -4,11 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.example.CafeQuestBackendAPI.repository.ReviewRepository;
+
 @Service
 public class ReviewsService {
 
 @Autowired
-private ReviewsRepository reviewsRepository;
+private ReviewRepository reviewsRepository;
     
 //endpoint mapping methods
 public Object getAllReviews() {
@@ -20,7 +22,7 @@ public Object getReviewById(@PathVariable Long id) {
 public Object getReviewByUsername(String userName){
     return reviewsRepository.getReviewsByUserName(userName);
 }
-public Reviews addReview(Reviews review) {
+public Review addReview(Review review) {
     return reviewsRepository.save(review);
 }
 public void deleteReview(Long reviewId) {
