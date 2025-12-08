@@ -1,4 +1,4 @@
-package com.example.demo.provider_cases;
+package com.example.demo.backend;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;

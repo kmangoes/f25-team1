@@ -1,4 +1,4 @@
-package com.example.demo.provider_cases;
+package com.example.demo.backend;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.example.demo.provider_cases;
+package com.example.demo.backend;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

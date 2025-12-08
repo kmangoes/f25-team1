@@ -7,16 +7,16 @@
         <meta name ="description" content="This is the provider side for the final Cafe Quest Version">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!--for recaptcha -->
         <meta charset="utf-8">
-        <title>Provider Side Login Page</title>
+        <title>USER Side Login Page</title>
     </head>
     <body style="background-color:#f4efe7;">
         <div class="top_bar" style="background-color:#f4efe7;">
             <!--logo will be used as home button-->
             <img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo" width="3%" height="3%">
         </div>
-        <form action="/login" method="post">
+        <form action="/users/login" method="post">
         <div class="text-center">
-            <header class="fw-bold fs-5"><strong>Admin</strong> Login</header>
+            <header class="fw-bold fs-5"><strong>User</strong> Login</header>
             <br>
             <input autocomplete="off" style="width: 400px;" type="text" name="email" placeholder="Email">  
             <br>
@@ -35,6 +35,6 @@
             <script>alert("${error}");</script>
         </#if>
         <!-- Popup for incorrect login END -->
-        <p class="text-center"><strong>Looking for the user login? <a href="/userLogin">Go here</a></strong></p>
+        <p class="text-center"><strong>New to Cafe Quest? <a href="/users/signupForm">Sign up here</a></strong></p>
     </body>
 </html>
