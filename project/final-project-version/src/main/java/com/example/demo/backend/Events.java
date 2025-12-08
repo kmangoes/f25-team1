@@ -1,14 +1,18 @@
 package com.example.demo.backend;
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-/*
- * Service entity class
- */
 @Entity
 @Table(name="events")
 public class Events {
@@ -26,6 +30,17 @@ public class Events {
     private String description;
     @Column (nullable = false)
     private String location;
+
+    @ManyToOne
+    @JoinColumn(name = "creatorId")
+    private User creator;
+    @ManyToMany
+    @JoinTable(
+        name = "event_attendees",
+        joinColumns = @JoinColumn(name = "eventId"),
+        inverseJoinColumns = @JoinColumn(name = "userId")
+    )
+    private List<User> attendees = new ArrayList<>();
 
     public Events() { }
 
@@ -81,5 +96,10 @@ public class Events {
     public void setDescription(String description) {
         this.description = description;
     }
-    
+    public User getCreator() {
+        return creator;
+    }
+    public void setCreator(User creator) {
+        this.creator = creator;
+    }
 }

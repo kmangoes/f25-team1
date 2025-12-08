@@ -1,5 +1,7 @@
 package com.example.demo.backend;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,8 @@ public class EventsController {
 private EventsService eventsService;
 @Autowired
 private CafeService cafesService;
+@Autowired
+private UserService userService;
 
 @GetMapping("/events")
 public Object getAllEvents(Model model) {
@@ -40,12 +44,16 @@ public Object showAddEventForm(Model model) {
     return "create_event_form"; //shows create_event_form.ftlh 
 }
 @PostMapping("/events")
-public Object addEvent (Events event) {
+public String addEvent(Events event, Principal principal) {
+    // Get currently logged in user
+    User user = userService.getByUsername(principal.getName());
+    // Attach creator
+    event.setCreator(user);
+    // Save event
     Events newEvent = eventsService.addEvent(event);
-    System.out.println("Event added: " + newEvent.getEventName()); //sanity check 
+    System.out.println("Event added: " + newEvent.getEventName());
     return "redirect:/events";
 }
-
 @GetMapping("/events/delete/{eventId}")
 public Object deleteEvent(@PathVariable Long eventId) {
     eventsService.deleteEvent(eventId);

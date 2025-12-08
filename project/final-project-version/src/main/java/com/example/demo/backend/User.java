@@ -1,4 +1,5 @@
 package com.example.demo.backend;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.CascadeType;
 
 @Entity
 @Table(name = "users")
@@ -33,12 +37,21 @@ public class User {
     @Column
     private int gradYear; 
 
+    @OneToMany(mappedBy="user", cascade=CascadeType.ALL, orphanRemoval=true)
+    private List<Review> reviews = new ArrayList<>();
+    
+    @OneToMany(mappedBy = "creator", cascade = CascadeType.ALL)
+    private List<Events> createdEvents = new ArrayList<>();
+    @ManyToMany(mappedBy = "attendees")
+    private List<Events> attendingEvents = new ArrayList<>();
+
+
     //attribute for saving events associated with user
 
     public User() {}
 
     //constructor w/ id
-    public User(Long userId, String name, String email, String username, String password, String drink, String major, int gradYear) {
+    public User(Long userId, String name, String email, String username, String password, String drink, String major, int gradYear, List<Review> reviews) {
         this.userId = userId;
         this.name = name;
         this.email = email;
@@ -47,9 +60,10 @@ public class User {
         this.drink = drink;
         this.major = major;
         this.gradYear = gradYear;
+        this.reviews = reviews;
     }
     //constructor w/o id
-    public User(String name, String email, String username, String password, String drink, String major, int gradYear) {
+    public User(String name, String email, String username, String password, String drink, String major, int gradYear, List<Review> reviews) {
         this.name = name;
         this.email = email;
         this.username = username;
@@ -57,6 +71,7 @@ public class User {
         this.drink = drink;
         this.major = major;
         this.gradYear = gradYear;
+        this.reviews = reviews;
     }
 
     //getters and setters
@@ -107,5 +122,11 @@ public class User {
     }
     public void setGradYear(int gradYear) {
         this.gradYear = gradYear;
+    }
+    public List<Review> getReviews() {
+        return reviews;
+    }
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 }

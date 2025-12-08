@@ -7,9 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ReviewsRepository extends JpaRepository<Reviews, Long> {
+public interface ReviewsRepository extends JpaRepository<Review, Long> {
     
-    @Query("SELECT r FROM Reviews r WHERE r.userName LIKE %?1%")
-    List<Reviews> getReviewsByUserName(String userName);
+    @Query("SELECT r FROM Review r WHERE r.user.username LIKE %?1%")
+    List<Review> getReviewsByUserName(String userName);
 
 }

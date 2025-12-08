@@ -2,6 +2,7 @@ package com.example.demo.backend;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -31,14 +32,14 @@ public class Cafes {
     private String hours; 
 
     /* Each cafe gets its own reviews table */
-    @OneToMany(mappedBy = "cafe", cascade=CascadeType.ALL)
-    private List<Reviews> reviews = new ArrayList<>();
-
+    @OneToMany(mappedBy = "cafe", cascade=CascadeType.ALL, orphanRemoval=true,fetch = FetchType.LAZY)
+    private List<Review> reviews = new ArrayList<>();
+    
 
     public Cafes() {} //empty constructor
 
     /* constructor w/ cafeId */
-    public Cafes (Long cafeId, String cafeName, String address, String description, double rating, String hours, List<Reviews> reviews) {
+    public Cafes (Long cafeId, String cafeName, String address, String description, double rating, String hours, List<Review> reviews) {
         this.cafeId = cafeId;
         this.cafeName = cafeName;
         this.address = address;
@@ -49,7 +50,7 @@ public class Cafes {
     }
 
     /* constructor without cafeId */
-    public Cafes (String cafeName, String address, String description, double rating, String hours, List<Reviews> reviews) {
+    public Cafes (String cafeName, String address, String description, double rating, String hours, List<Review> reviews) {
         this.cafeName = cafeName;
         this.address = address;
         this.description = description;
@@ -88,10 +89,10 @@ public class Cafes {
     public void setRating(double rating) {
         this.rating = rating;
     }
-    public List<Reviews> getReviews() {
+    public List<Review> getReviews() {
         return reviews; 
     }
-    public void setReviews(List<Reviews> reviews) {
+    public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
     public String getHours() {

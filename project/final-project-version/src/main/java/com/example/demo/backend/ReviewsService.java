@@ -22,7 +22,7 @@ public Object getReviewById(@PathVariable Long id) {
 public Object getReviewByUsername(String userName){
     return reviewsRepository.getReviewsByUserName(userName);
 }
-public Reviews addReview(Reviews review) {
+public Review addReview(Review review) {
     Long cafe_id = review.getCafe().getCafeId();
     Cafes existingCafe = cafesRepository.findById(cafe_id).orElseThrow(() -> new IllegalArgumentException("Cafe not found with id: " + cafe_id));
 

@@ -31,6 +31,8 @@ public boolean validateLogin(String email, String password) {
 
         return user.getPassword().equals(password);
 }
-
+public User getByUsername(String username) {
+    return userRepository.findUsersByUsername(username);
+}
 
 }
