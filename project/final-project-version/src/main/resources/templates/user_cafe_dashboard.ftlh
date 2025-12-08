@@ -10,7 +10,7 @@
         <title>USER Cafe Dashboard</title>
     </head>
     <body style="background-color: #ffffff;">
-        <div class="topbar" style="background-color: #fffcf7;">
+        <div class="topbar" style="background-color: #ffffff;">
             <img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo">
         </div>
         <div class="dashboard">

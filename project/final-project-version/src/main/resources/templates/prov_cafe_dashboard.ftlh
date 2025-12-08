@@ -32,7 +32,7 @@
                 </header>
                 <#list cafesList as cafe> <!-- START cafes loop -->
                 <main> 
-                    <div class="cafe" onclick="window.open('https://www.google.com/search?q=${cafe.cafeName?url}')"> <!--MAIN CONTENT MADE UP COMPLETELY OF CARDS-->
+                    <div class="cafe" onclick="window.open('https://www.google.com/search?q=${cafe.cafeName?url}')" style="background-color: #ffffff;"> <!--MAIN CONTENT MADE UP COMPLETELY OF CARDS-->
                             <button class="edit_btn2" type="button" onclick="event.stopPropagation(); window.location.href='cafes/delete/${cafe.cafeId}'">Remove Cafe</button>
                             <button class="edit_btn2" type="button" onclick="event.stopPropagation(); window.location.href='cafes/updateForm/${cafe.cafeId}'">Edit Cafe</button>
                             <button class="edit_btn2" type="button" onclick="event.stopPropagation(); window.location.href='reviews/${cafe.cafeId}'">View Reviews</button>

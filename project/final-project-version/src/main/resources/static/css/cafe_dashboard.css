@@ -9,7 +9,8 @@ p {
     padding: 3px;
     color: black; 
 }
-p:hover {    
+p:hover {
+    background-color: rgba(200, 200, 200, 0.3);
     cursor: pointer; 
 }
 a {
@@ -105,5 +106,6 @@ main {
     margin-right: 5%;
 }
 .cafe_items:hover {
+    background-color: #ffffff;
     cursor:default
 }

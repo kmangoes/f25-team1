@@ -36,5 +36,6 @@
         </#if>
         <!-- Popup for incorrect login END -->
         <p class="text-center"><strong>Looking for the user login? <a href="/users/login">Go here</a></strong></p>
+        <p class="text-center"><strong>New to Cafe Quest? <a href="/provider/signupForm">Register as Admin here</a></strong></p>
     </body>
 </html>
