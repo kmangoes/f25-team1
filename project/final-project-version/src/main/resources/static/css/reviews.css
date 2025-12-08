@@ -1,0 +1,35 @@
+html, body {
+    height: 100%; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'helvetica', sans-serif;
+}
+.reviews_section {
+    width: 70%;
+    margin: auto;
+    padding-top: 50px;
+}
+.reviews {
+    padding: 15px;
+    border-radius: 15px; 
+    border: 2px solid black; 
+}
+.topbar {
+    padding: 25px;
+    text-align: center;
+}
+.logo {
+    float: left;
+    margin-left: 30px;
+    height: 25px;
+    width: 28px;
+}
+.logo:hover {
+    transform: translateY(-5px);
+    transition: margin 10.0s ease-in-out;
+}
+.page_header {
+    margin-right: 58px;
+    font-weight: bold;
+}

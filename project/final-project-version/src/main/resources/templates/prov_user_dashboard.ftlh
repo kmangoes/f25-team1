@@ -14,7 +14,14 @@
             <img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo">
         </div>
         <div class="dashboard">
-
+            <div class="side_navbar">
+                <!--FIXED sidebar to navigate to all other pages-->
+                <p><strong><i class="fa-solid fa-circle-user"></i>   Users</strong></p>
+                <a href="/events" style="text-decoration:none;"><p><strong><i class="fa-solid fa-calendar"></i>   Events</strong></p></a>
+                <a href="/providers/cafes" style="text-decoration:none;"><p style="color: black"><strong><i class="fa-solid fa-location-dot"></i>  Cafes</strong></p></a>
+                <hr>
+                <a href="/provider/login"><p class="logout_btn" style="color:black"><strong><i class="fa-solid fa-arrow-left"></i>  Log out</strong></p></a>
+            </div>
 
             
         </div>

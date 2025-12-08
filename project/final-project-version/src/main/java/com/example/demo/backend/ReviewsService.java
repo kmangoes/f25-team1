@@ -1,5 +1,7 @@
 package com.example.demo.backend;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,8 +18,8 @@ private ReviewsRepository reviewsRepository;
 public Object getAllReviews() {
     return reviewsRepository.findAll();
 }
-public Object getReviewById(@PathVariable Long id) {
-    return reviewsRepository.findById(id);
+public List<Review> getReviewByCafeId(Long cafeId) {
+    return reviewsRepository.findByCafeCafeId(cafeId);
 }
 public Object getReviewByUsername(String userName){
     return reviewsRepository.getReviewsByUserName(userName);

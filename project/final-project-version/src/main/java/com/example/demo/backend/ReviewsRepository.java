@@ -12,4 +12,5 @@ public interface ReviewsRepository extends JpaRepository<Review, Long> {
     @Query("SELECT r FROM Review r WHERE r.user.username LIKE %?1%")
     List<Review> getReviewsByUserName(String userName);
 
+    List<Review> findByCafeCafeId(Long cafeId);
 }
