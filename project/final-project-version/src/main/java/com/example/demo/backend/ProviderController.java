@@ -51,11 +51,17 @@ public Object getAllProviders(Model model) {
     model.addAttribute("providers", providerService.getAllProviders());
     return "providers"; // returns the name of the view (e.g., providers.html)
 }
-@PostMapping("/providers")
-public Provider addProvider (@RequestBody Provider provider) {
-    return providerService.addProvider(provider);
+
+@GetMapping("/provider/signupForm")
+public String showProviderSignupForm() {
+    return "prov_signup"; //shows prov_signup.ftlh
 }
-@PutMapping("/providers/{providerId}")
+@PostMapping("/provider")
+public Object addProvider (Provider provider) {
+    providerService.addProvider(provider);
+    return "redirect:/provider/login";
+}
+@PutMapping("/provider/{providerId}")
 public Provider updateProvider (@PathVariable Long providerId, @RequestBody Provider provider) {
     return providerService.updateProvider(providerId, provider);
 }

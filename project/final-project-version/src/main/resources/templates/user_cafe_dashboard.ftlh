@@ -20,7 +20,7 @@
                 <a href="/events" style="text-decoration:none;"><p><strong><i class="fa-solid fa-calendar"></i>   Events</strong></p></a>
                 <a href="/users/cafes" style="text-decoration:none;"><p style="color: black"><strong><i class="fa-solid fa-location-dot"></i>  Cafes</strong></p></a>
                 <hr>
-                <a href="/login"><p class="logout_btn" style="color:black"><strong><i class="fa-solid fa-arrow-left"></i>  Log out</strong></p></a>
+                <a href="/users/login"><p class="logout_btn" style="color:black"><strong><i class="fa-solid fa-arrow-left"></i>  Log out</strong></p></a>
             </div>            
             <div class="main_content">
                 <header class="top_elem">
@@ -28,7 +28,7 @@
                 </header>
                 <#list cafesList as cafe> <!-- START cafes loop -->
                 <main> 
-                    <div class="cafe" onclick="window.open('https://www.google.com/search?q=${cafe.cafeName?url}')"> <!--MAIN CONTENT MADE UP COMPLETELY OF CARDS-->
+                    <div class="cafe" onclick="window.open('https://www.google.com/search?q=${cafe.cafeName?url}')" style="background-color: white;"> <!--MAIN CONTENT MADE UP COMPLETELY OF CARDS-->
                             <button class="edit_btn2" type="button" onclick="event.stopPropagation(); window.location.href='reviews/${cafe.cafeId}'">View Reviews</button>
                             <p class="cafe_items"><strong>Cafe:</strong> ${cafe.cafeName} </p>
                             <p class="cafe_items"><strong>Location:</strong> ${cafe.address}</p>
