@@ -45,16 +45,20 @@ public Object updateCafe(@PathVariable Long cafeId, Cafes updatedCafe) {
 
 
 
-@GetMapping("/cafes")
+@GetMapping("/providers/cafes")
 public Object getAllCafes(Model model) {
-    //return cafeService.getAllCafes();
     model.addAttribute("cafesList", cafeService.getAllCafes());
-    return "cafe_dashboard"; //returns cafe_dashboard.ftlh 
+    return "prov_cafe_dashboard"; //returns prov_cafe_dashboard.ftlh 
 }
-@GetMapping("/cafes/delete/{cafeId}")
+@GetMapping("/providers/cafes/delete/{cafeId}")
 public Object deleteCafe(@PathVariable Long cafeId) {
     cafeService.deleteCafe(cafeId);
-    return "redirect:/cafes";
+    return "redirect:/providers/cafes";
+}
+@GetMapping("/users/cafes")
+public Object getAllUserCafes(Model model) {
+    model.addAttribute("cafesList", cafeService.getAllCafes());
+    return "user_cafe_dashboard"; //returns user_cafe_dashboard.ftlh 
 }
 
 @GetMapping("/cafes/id/{cafeId}")

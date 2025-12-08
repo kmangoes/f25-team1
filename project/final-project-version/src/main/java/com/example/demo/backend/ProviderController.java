@@ -41,7 +41,7 @@ public String handleLogin(@RequestParam String email, @RequestParam String passw
     }
     else {
         System.out.println("Login successful for email: " + email);
-        return "redirect:/cafes"; // Redirect to provider's cafe dashboard after successful login
+        return "redirect:/providers/cafes"; // Redirect to provider's cafe dashboard after successful login
     }
 }
 

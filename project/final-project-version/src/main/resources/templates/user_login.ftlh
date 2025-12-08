@@ -9,8 +9,8 @@
         <meta charset="utf-8">
         <title>USER Side Login Page</title>
     </head>
-    <body style="background-color:#f4efe7;">
-        <div class="top_bar" style="background-color:#f4efe7;">
+    <body style="background-color:#fffcf7;">
+        <div class="top_bar" style="background-color:#fffcf7;">
             <!--logo will be used as home button-->
             <img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo" width="3%" height="3%">
         </div>

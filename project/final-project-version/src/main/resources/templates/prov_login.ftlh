@@ -14,7 +14,7 @@
             <!--logo will be used as home button-->
             <img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo" width="3%" height="3%">
         </div>
-        <form action="/login" method="post">
+        <form action="/provider/login" method="post">
         <div class="text-center">
             <header class="fw-bold fs-5"><strong>Admin</strong> Login</header>
             <br>

@@ -43,7 +43,7 @@ public String handleLogin(@RequestParam String email, @RequestParam String passw
         }
     else {
         System.out.println("Login successful for email: " + email);
-        return "redirect:/cafes"; // Redirect to user's cafe dashboard after successful login
+        return "redirect:/users/cafes"; // Redirect to user's cafe dashboard after successful login
         }
     }
 @PostMapping("/users/{userId}")
