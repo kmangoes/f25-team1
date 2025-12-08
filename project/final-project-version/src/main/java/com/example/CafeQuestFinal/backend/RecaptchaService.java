@@ -1,4 +1,4 @@
-package com.example.CafeQuestFinal.services;
+package com.example.CafeQuestFinal.backend;
 import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
