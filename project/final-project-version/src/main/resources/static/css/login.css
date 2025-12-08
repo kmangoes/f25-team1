@@ -1,0 +1,26 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+div {
+    padding: 25px; 
+}
+p {
+    color: gray; 
+}
+input {
+    padding: 8px; 
+    margin: 13px; 
+    border-radius: 8px;
+    border-width: 1px; 
+    color: black;
+}
+input::placeholder {
+    color: rgb(188, 180, 180);
+}
+.logo {
+    margin-left: 75px; 
+}
+.logo:hover {
+    transform: translateY(-5px);
+    transition: margin 10.0s ease-in-out;
+}
