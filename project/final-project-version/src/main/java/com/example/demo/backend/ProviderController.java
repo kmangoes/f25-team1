@@ -33,11 +33,11 @@ public String handleLogin(@RequestParam String email, @RequestParam String passw
     
     if (!isRecaptchaValid) {
         model.addAttribute("error", "reCAPTCHA verification failed. Please try again.");
-        return "login"; // Return to login page with error message
+        return "prov_login"; // Return to login page with error message
     }
     if (!isValid) {
         model.addAttribute("error", "Invalid email or password");
-        return "login"; // Return to login page with error message
+        return "prov_login"; // Return to login page with error message
     }
     else {
         System.out.println("Login successful for email: " + email);

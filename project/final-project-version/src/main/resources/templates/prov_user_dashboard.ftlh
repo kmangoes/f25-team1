@@ -16,14 +16,30 @@
         <div class="dashboard">
             <div class="side_navbar">
                 <!--FIXED sidebar to navigate to all other pages-->
-                <p><strong><i class="fa-solid fa-circle-user"></i>   Users</strong></p>
-                <a href="/events" style="text-decoration:none;"><p><strong><i class="fa-solid fa-calendar"></i>   Events</strong></p></a>
-                <a href="/providers/cafes" style="text-decoration:none;"><p style="color: black"><strong><i class="fa-solid fa-location-dot"></i>  Cafes</strong></p></a>
+                <a href="/providers/users" style="text-decoration:none;"><p class="side_items"style="color: black"><strong><i class="fa-solid fa-circle-user"></i>   Users</strong></p></a>
+                <a href="/provider/events" style="text-decoration:none;"><p class="side_items" style="color: black"><strong><i class="fa-solid fa-calendar"></i>   Events</strong></p></a>
+                <a href="/providers/cafes" style="text-decoration:none;"><p class="side_items" style="color: black"><strong><i class="fa-solid fa-location-dot"></i>  Cafes</strong></p></a>
                 <hr>
                 <a href="/provider/login"><p class="logout_btn" style="color:black"><strong><i class="fa-solid fa-arrow-left"></i>  Log out</strong></p></a>
             </div>
-
-            
+            <div class="main_content">
+            <header class="top_elem">
+                User Management
+                <!-- Add a button later if you want provider to add users manually -->
+                <!-- <button class="edit_btn1" onclick="window.location.href='/providers/users/add'">Add User</button> -->
+            </header>
+            <#list users as user>
+            <main>
+                <div class="user" style="background-color: #ffffff;">
+                    <button class="edit_btn2" type="button" onclick="window.location.href='/providers/users/${user.userId}/details'">View Profile</button>
+                    <button class="edit_btn2" type="button" onclick="window.location.href='/users/delete/${user.userId}'"> Delete User </button>
+                    <p class="user_items"><strong>Name:</strong> ${user.name}</p>
+                    <p class="user_items"><strong>Email:</strong> ${user.email}</p>
+                    <p class="user_items"><strong>Major:</strong> ${user.username}</p>
+                </div>
+            </main>
+            </#list>
+        </div>
         </div>
     </body>
 </html>

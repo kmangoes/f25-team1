@@ -37,8 +37,6 @@ public Object getReviewByUsername (@RequestParam String userName) {
         return reviewsService.getAllReviews();
     }
 }
-
-
 @GetMapping("/users/reviews/{cafeId}/add")
 public String showAddReviewForm(@PathVariable Long cafeId, Model model) {
     Cafes cafe = cafeService.getCafeById(cafeId);
@@ -55,9 +53,6 @@ public String addReview(@ModelAttribute Review review, @PathVariable Long cafeId
     reviewsService.addReview(review);
     return "redirect:/users/reviewsPage/" + cafeId;
 }
-
-
-
 @DeleteMapping("/reviews/{reviewId}")
 public void deleteReview(@PathVariable Long reviewId) {
     reviewsService.deleteReview(reviewId);

@@ -14,7 +14,7 @@
         </div>
         <div class="reviews_section">
             <#list reviews as review>
-                <div class="reviews">
+                <div class="reviews" style="background-color: white;">
                     <p><strong>${review.starRating} ★</strong></p>
                     <p>${review.reviewText}</p>
                     <p><small>By ${review.user.username}</small></p>

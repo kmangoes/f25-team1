@@ -102,4 +102,10 @@ public class Events {
     public void setCreator(User creator) {
         this.creator = creator;
     }
+    public List<User> getAttendees() {
+        return attendees;
+    }
+    public void setAttendees(List<User> attendees) {
+        this.attendees = attendees;
+    }
 }

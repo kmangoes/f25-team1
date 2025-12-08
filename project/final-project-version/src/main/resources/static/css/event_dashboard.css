@@ -96,6 +96,10 @@ main {
     margin-right: 5%;
 }
 .event_items:hover {
-    background-color: #f7f6f6;
+    background-color: #ffffff;
+    cursor:default
+}
+.user_event_items:hover {
+    background-color: #ffffff;
     cursor:default
 }

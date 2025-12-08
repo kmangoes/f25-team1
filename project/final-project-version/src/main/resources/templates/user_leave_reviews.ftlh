@@ -9,15 +9,16 @@
     </head>
     <body style="background-color: white;">
         <div class="topbar">
-            <a href="/providers/cafes" style="text-decoration: none;"><img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo"></a> 
-            <h5 class="page_header">$Leave a Review for ${cafe.cafeName}</h5>
-            <button class="btn btn-primary btn-sm" onclick="location.href='/users/reviews/${cafe.cafeId}'">Add Review</button>
+            <a href="/users/cafes" style="text-decoration: none;"><img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo"></a> 
+            <h5 class="page_header">Leave a Review for ${cafe.cafeName}</h5>
         </div>
-        <div class="review_form">
-            <form action="/users/reviews/${cafe.cafeId}" method="post">
-                <input type="number" id="starRating" name="starRating" min="1" max="5" required>
-                <input type="text" id="reviewText" name="reviewText" placeholder="Write your review here..." required>
-                <button type="submit">Submit Review</button>
+        <div>
+            <form class="review_form" action="/users/reviews/${cafe.cafeId}" method="post">
+                <input class="review_item" type="number" id="starRating" name="starRating" min="1" max="5" placeholder="Rate 1-5 stars" required>
+                <br>
+                <input class="review_item" type="description" id="reviewText" name="reviewText" placeholder="Write your review here..." required>
+                <br>
+                <button class="review_item" type="submit">Submit Review</button>
             </form>     
         </div>
     </body>

@@ -6,7 +6,7 @@ html, body {
     font-family: 'helvetica', sans-serif;
 }
 .reviews_section {
-    width: 70%;
+    width: 65%;
     margin: auto;
     padding-top: 50px;
 }
@@ -32,4 +32,34 @@ html, body {
 .page_header {
     margin-right: 58px;
     font-weight: bold;
+}
+.review_form {
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.review_item {
+    width: 300px;
+    border: 2px solid black; 
+    border-radius: 15px; 
+    padding: 10px; 
+    margin: 20px; 
+}
+button[type=submit] {
+    width: 150px;
+    padding: 5px; 
+    border: 2px solid black; 
+    border-radius: 15px; 
+    cursor: pointer; 
+}
+.add_button {
+    margin-top: 10px; 
+    border-radius: 15px; 
+    padding: 5px; 
+    font-size: 13px;
+    font-weight: bold; 
+}
+.reviews:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s;
 }

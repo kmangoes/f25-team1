@@ -35,11 +35,11 @@ public String handleLogin(@RequestParam String email, @RequestParam String passw
     
     if (!isRecaptchaValid) {
         model.addAttribute("error", "reCAPTCHA verification failed. Please try again.");
-        return "login"; // Return to login page with error message
+        return "user_login"; // Return to login page with error message
         }
     if (!isValid) {
         model.addAttribute("error", "Invalid email or password");
-        return "login"; // Return to login page with error message
+        return "user_login"; // Return to login page with error message
         }
     else {
         System.out.println("Login successful for email: " + email);
@@ -51,8 +51,9 @@ public User updateUser (@PathVariable Long userId, @RequestBody User updatedUser
     return userService.updateUser(userId, updatedUser);
 }
 @PostMapping("/users/delete/{userId}")
-public void deleteUser (@PathVariable Long userId) {
+public String deleteUser(@PathVariable Long userId) {
     userService.deleteUser(userId);
+    return "redirect:/providers/users"; // or wherever the list is
 }
 @GetMapping("/users/signupForm")
 public String showUserSignupForm() {
@@ -62,6 +63,11 @@ public String showUserSignupForm() {
 public Object addUser (User user) {
     userService.addUser(user);
     return "redirect:/users/login"; //redirects to user login page after signup
+}
+@GetMapping("/providers/users")
+public String getAllUsers(Model model) {
+    model.addAttribute("users", userService.getAllUsers());
+    return "prov_user_dashboard"; //return prov_user_dashboard.ftlh
 }
 
 }

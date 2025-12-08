@@ -9,9 +9,9 @@
     </head>
     <body style="background-color: white;">
         <div class="topbar">
-            <a href="/providers/cafes" style="text-decoration: none;"><img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo"></a> 
+            <a href="/users/cafes" style="text-decoration: none;"><img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo"></a> 
             <h5 class="page_header">${cafe.cafeName} Reviews</h5>
-            <button class="btn btn-primary btn-sm" onclick="location.href='/users/reviews/${cafe.cafeId}'">Add Review</button>
+            <button style="background-color: black; color: white;" class="add_button" onclick="location.href='/users/reviews/${cafe.cafeId}/add'">Add Review</button>
         </div>
         <div class="reviews_section">
             <#list reviews as review>

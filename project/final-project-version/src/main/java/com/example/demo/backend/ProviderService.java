@@ -32,4 +32,5 @@ public boolean validateLogin(String email, String password) {
 
         return provider.getPassword().equals(password);
 }
+
 }

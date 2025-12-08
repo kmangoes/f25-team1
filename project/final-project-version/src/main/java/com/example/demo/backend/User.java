@@ -2,8 +2,6 @@ package com.example.demo.backend;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -51,7 +49,7 @@ public class User {
     public User() {}
 
     //constructor w/ id
-    public User(Long userId, String name, String email, String username, String password, String drink, String major, int gradYear, List<Review> reviews) {
+    public User(Long userId, String name, String email, String username, String password, String drink, String major, int gradYear, List<Review> reviews, List<Events> createdEvents, List<Events> attendingEvents) {
         this.userId = userId;
         this.name = name;
         this.email = email;
@@ -61,9 +59,11 @@ public class User {
         this.major = major;
         this.gradYear = gradYear;
         this.reviews = reviews;
+        this.createdEvents = new ArrayList<>();
+        this.attendingEvents = new ArrayList<>();
     }
     //constructor w/o id
-    public User(String name, String email, String username, String password, String drink, String major, int gradYear, List<Review> reviews) {
+    public User(String name, String email, String username, String password, String drink, String major, int gradYear, List<Review> reviews, List<Events> createdEvents, List<Events> attendingEvents) {
         this.name = name;
         this.email = email;
         this.username = username;
@@ -72,6 +72,8 @@ public class User {
         this.major = major;
         this.gradYear = gradYear;
         this.reviews = reviews;
+        this.createdEvents = new ArrayList<>();
+        this.attendingEvents = new ArrayList<>();
     }
 
     //getters and setters
@@ -128,5 +130,17 @@ public class User {
     }
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
+    }
+    public List<Events> getCreatedEvents() {
+        return createdEvents;
+    }
+    public void setCreatedEvents(List<Events> createdEvents) {
+        this.createdEvents = createdEvents;
+    }
+    public List<Events> getAttendingEvents() {
+        return attendingEvents;
+    }
+    public void setAttendingEvents(List<Events> attendingEvents) {
+        this.attendingEvents = attendingEvents;
     }
 }

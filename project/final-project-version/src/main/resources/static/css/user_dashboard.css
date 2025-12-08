@@ -8,14 +8,13 @@ p {
     border-radius: 10px; 
     padding: 3px;
 }
-p:hover {
+.side_items:hover {
     background-color: rgba(200, 200, 200, 0.3);
     cursor: pointer; 
 }
 main {
     margin-top: 30px; 
 }
-
 .top_elem {
     font-size: 25px; 
     font-weight: bold; 
@@ -25,7 +24,6 @@ main {
     float: right;
     margin-right: 15%;
 }
-
 .edit_btn1, .edit_btn2 {
     font-size: 13px;
     border-radius: 8px;
@@ -78,18 +76,21 @@ main {
     text-align: left; 
 }
 .user {
-    border: 1px solid black; 
+    height: auto;
+    border: 2px solid black; 
     border-radius: 8px;
     width: 90%; 
-    height: 125px;
+    height: auto;
     margin-bottom: 30px;
     padding-left: 15px;
+    padding-top: 20px;
 }
 .edit_btn2 {
     float: right;
     margin-right: 5%;
+    margin-top: 12%;
 }
 .user_items:hover {
-    background-color: #f4efe7;
+    background-color: white;
     cursor:default
 }
