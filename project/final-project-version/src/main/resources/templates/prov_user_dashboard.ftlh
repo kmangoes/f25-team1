@@ -31,11 +31,10 @@
             <#list users as user>
             <main>
                 <div class="user" style="background-color: #ffffff;">
-                    <button class="edit_btn2" type="button" onclick="window.location.href='/providers/users/${user.userId}/details'">View Profile</button>
                     <button class="edit_btn2" type="button" onclick="window.location.href='/users/delete/${user.userId}'"> Delete User </button>
                     <p class="user_items"><strong>Name:</strong> ${user.name}</p>
                     <p class="user_items"><strong>Email:</strong> ${user.email}</p>
-                    <p class="user_items"><strong>Major:</strong> ${user.username}</p>
+                    <p class="user_items"><strong>Username:</strong> ${user.username}</p>
                 </div>
             </main>
             </#list>

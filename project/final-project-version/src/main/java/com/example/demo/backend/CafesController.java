@@ -19,32 +19,26 @@ public Object showAddCafeForm(Model model) {
     model.addAttribute("title", "Insanity Check >:(");
     model.addAttribute("cafe", new Cafes());
     System.out.println("showAddCafeForm called"); //sanity check in terminal
-    return "create_cafe_form"; //shows create_cafe_form.ftlh 
+    return "prov_create_cafe_form"; //shows create_cafe_form.ftlh 
 }
 @PostMapping("/cafes")
 public Object addCafe (Cafes cafe) {
     Cafes newCafe = cafeService.addCafe(cafe);
     System.out.println("New cafe received: " + newCafe.getCafeName()); //sanity check in terminal 
-    return "redirect:/cafes";
+    return "redirect:/providers/cafes"; //redirects to provider's cafe dashboard after adding new cafe
 }
-
-
-
 @GetMapping("/cafes/updateForm/{cafeId}")
-public Object showUpdateCafeForm(@PathVariable Long cafeId, Model model) {
+public String showUpdateCafeForm(@PathVariable Long cafeId, Model model) {
     Cafes updatingCafe = cafeService.getCafeById(cafeId);
     model.addAttribute("cafe", updatingCafe);
     System.out.println("showUpdateCafeForm called for cafeId: " + cafeId); //sanity check in terminal
-    return "update_cafe_form"; //returns update_cafe_form.ftlh 
+    return "prov_update_cafe_form"; //returns update_cafe_form.ftlh 
 }
 @PostMapping("/cafes/update/{cafeId}")
 public Object updateCafe(@PathVariable Long cafeId, Cafes updatedCafe) {
     cafeService.updateCafe(cafeId, updatedCafe);
-    return "redirect:/cafes"; //redirects to cafe list after update
+    return "redirect:/providers/cafes"; //redirects to cafe list after update
 }
-
-
-
 @GetMapping("/providers/cafes")
 public Object getAllCafes(Model model) {
     model.addAttribute("cafesList", cafeService.getAllCafes());
