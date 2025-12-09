@@ -23,8 +23,7 @@ public void deleteUser(@PathVariable Long userId) {
     userRepository.deleteById(userId);
     }
 public boolean validateLogin(String email, String password) {
-        User user = userRepository.findByEmail(email);
-
+        User user = userRepository.findByEmail(email).orElse(null);
         if (user == null) {
             return false; // email not found
         }
@@ -33,6 +32,9 @@ public boolean validateLogin(String email, String password) {
 }
 public User getByUsername(String username) {
     return userRepository.findUsersByUsername(username);
+}
+public User getByEmail(String email) {
+    return userRepository.findByEmail(email).orElse(null);
 }
 
 }

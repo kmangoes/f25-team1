@@ -1,6 +1,5 @@
 package com.example.demo.backend;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,9 +14,7 @@ import org.springframework.ui.Model;
 
 @Controller
 public class EventsController {
-    
-@Autowired
-private ProviderService providerService;
+
 @Autowired
 private EventsService eventsService;
 @Autowired
@@ -36,14 +33,16 @@ public Object getAllEvents(Model model) {
 
 @GetMapping("/users/events")
 public String showUserEventsDashboard(Model model, HttpServletRequest request) {
+    System.out.println("Controller called: /users/events");
     String email = (String) request.getSession().getAttribute("userEmail");
     System.out.println("email retrieved from session: " + email);
     if (email == null) {
         return "redirect:/users/login";
     }
-    User user = userService.getByUsername(email);
+    User user = userService.getByEmail(email);
     List<Events> availableEvents = eventsRepository.findAllWhereUserNotAttending(user, user.getUserId());
     model.addAttribute("events", availableEvents);
+    System.out.println("Event count = " + availableEvents.size());
     return "user_event_dashboard";
 }
 
@@ -76,13 +75,12 @@ public Object showProvAddEventForm(Model model) {
 @PostMapping("/events")
 public String addEvent(Events event, HttpServletRequest request) {
     String email = (String) request.getSession().getAttribute("userEmail");
-    if (email != null) {
-        User user = userService.getByUsername(email);
-        if (user != null) {
-            event.setCreator(user);
-            eventsService.addEvent(event);
-            return "redirect:/users/events";
-        }
+    if (email != null) { 
+        User user = userService.getByEmail(email);
+        System.out.println("Posting event by: " + email);
+        event.setCreator(user);
+        eventsService.addEvent(event);
+        return "redirect:/users/events";
     }
     eventsService.addEvent(event);
     return "redirect:/provider/events";
@@ -98,11 +96,15 @@ public String deleteEvent(@PathVariable Long eventId) {
 public String joinEvent(@PathVariable Long eventId, HttpServletRequest request) {
     String email = (String) request.getSession().getAttribute("userEmail");
     if (email == null) return "redirect:/users/login";
-    User user = userService.getByUsername(email);
+    User user = userService.getByEmail(email);
     Events event = eventsService.getEventById(eventId);
-    event.getAttendees().add(user);
-    eventsService.addEvent(event);
-    return "redirect:/users/events";
+    
+    //check for duplicates
+    if (!event.getAttendees().contains(user)) {
+        event.getAttendees().add(user);
+        eventsService.addEvent(event);
+    }
+    return "redirect:/users/myActivity"; //redirect to user profile page showing joined/created events
 }
 
 @GetMapping("/users/events/leave/{eventId}")

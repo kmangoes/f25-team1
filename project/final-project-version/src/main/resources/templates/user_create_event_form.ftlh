@@ -10,7 +10,7 @@
     </head>
     <body style="background-color: #f4efe7;">
         <div class="topbar">
-            <a href="/events" style="text-decoration: none;"><img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo" height="3%"></a>
+            <a href="/users/events" style="text-decoration: none;"><img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo" height="3%"></a>
             <h5 class="page_header">Create New Event</h5>
         </div>
         <div class="form_inputs">

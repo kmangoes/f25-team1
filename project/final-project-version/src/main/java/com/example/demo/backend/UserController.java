@@ -61,6 +61,21 @@ public String deleteUser(@PathVariable Long userId) {
 public String showUserSignupForm() {
     return "user_signup"; //shows user_signup.ftlh
 }
+
+
+//show user activity dashboard
+@GetMapping("/users/myActivity")
+public String showUserActivityDashboard(Model model, HttpServletRequest request) {
+
+
+
+
+    return "user_activity_dashboard"; //shows user_activity_dashboard.ftlh
+}
+
+
+
+
 @PostMapping("/users")
 public Object addUser (User user) {
     userService.addUser(user);
@@ -71,5 +86,6 @@ public String getAllUsers(Model model) {
     model.addAttribute("users", userService.getAllUsers());
     return "prov_user_dashboard"; //return prov_user_dashboard.ftlh
 }
+
 
 }
