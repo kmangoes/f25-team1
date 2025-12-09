@@ -29,25 +29,26 @@
                 <div class="events-container">
                     <div class="created_events">
                         <p style="font-weight: bold; background-color: #ffffff !important;">Events Created</p>
-                            <div class="event">
                             <#list createdEvents as event>
+                            <div class="event_card">
                                 <p style="background-color: white!important;">${event.eventName}</p>
                                 <p style="background-color: white!important;">${event.location}</p>
                                 <p style="background-color: white!important;">${event.eventDate}</p>
-                            </#list>
+                                <button class="edit_btn2" type="button" onclick="window.location.href='/events/delete/${event.eventId}'">Delete Event</button>
                             </div>
+                            </#list>
                     </div>
                 <div class="joined_events">
                         <p style="font-weight: bold; background-color: #ffffff !important;">Events Attending</p>
-                            <div class="event">
                             <#list joinedEvents as event>
+                            <div class="event_card">
                                 <p style="background-color: white!important;">${event.eventName}</p>
                                 <p style="background-color: white!important;">${event.location}</p>
                                 <p style="background-color: white!important;">${event.eventDate}</p>
                                 <button class="edit_btn2" type="button" onclick="window.location.href='/users/events/leave/${event.eventId}'">Leave Event</button>
-                            </#list>
                             </div>
-                </div>
+                            </#list>
+                    </div>
             </div>
         </div>    
     </body>

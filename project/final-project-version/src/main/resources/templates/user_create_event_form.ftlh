@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <title>Create New Event Form</title>
     </head>
-    <body style="background-color: #f4efe7;">
+    <body style="background-color: #ffffff;">
         <div class="topbar">
             <a href="/users/events" style="text-decoration: none;"><img class="logo" src="/img/cafequest_logo.png" alt="cafequest_logo" height="3%"></a>
             <h5 class="page_header">Create New Event</h5>

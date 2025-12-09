@@ -79,12 +79,12 @@ main {
 .events-container {
     margin-top: 50px;
     display: flex;
-    gap: 40px;
+    gap: 10px;
 }
 .events-container > div {
     flex: 1;
 }
-.event {
+.event_card {
     height: auto; 
     border: 2px solid black;
     border-radius: 15px;
@@ -92,9 +92,12 @@ main {
     padding-left: 15px;  
     padding-top: 10px; 
     padding-bottom: 8px; 
+    margin-bottom: 30px; 
 }
 .edit_btn2 {
-    float: right; 
-    margin-right: 20px;
-    margin-bottom: 80px;
+    float: none;
+    margin-left: 72%;
+    font-size: 13px;
+    border-radius: 8px;
+    border: 1px solid black;
 }

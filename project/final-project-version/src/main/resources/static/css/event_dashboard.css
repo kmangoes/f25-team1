@@ -29,7 +29,7 @@ main {
 .edit_btn1, .edit_btn2 {
     font-size: 13px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 1px none black;
 }
 .logout_btn {
     position: absolute; 
@@ -94,6 +94,7 @@ main {
 .edit_btn2 {
     float: right;
     margin-right: 5%;
+    border: 1px none black;
 }
 .event_items:hover {
     background-color: #ffffff;

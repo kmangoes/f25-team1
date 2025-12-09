@@ -87,8 +87,12 @@ public String addEvent(Events event, HttpServletRequest request) {
 }
 
 @GetMapping("/events/delete/{eventId}")
-public String deleteEvent(@PathVariable Long eventId) {
+public String deleteEvent(@PathVariable Long eventId, HttpServletRequest request) {
     eventsService.deleteEvent(eventId);
+    String userEmail = (String) request.getSession().getAttribute("userEmail");
+    if (userEmail != null) {
+        return "redirect:/users/myActivity";  // user dashboard
+    }
     return "redirect:/provider/events";
 }
 
@@ -98,7 +102,7 @@ public String joinEvent(@PathVariable Long eventId, HttpServletRequest request) 
     if (email == null) return "redirect:/users/login";
     User user = userService.getByEmail(email);
     Events event = eventsService.getEventById(eventId);
-    
+
     //check for duplicates
     if (!event.getAttendees().contains(user)) {
         event.getAttendees().add(user);
@@ -111,11 +115,11 @@ public String joinEvent(@PathVariable Long eventId, HttpServletRequest request) 
 public String leaveEvent(@PathVariable Long eventId, HttpServletRequest request) {
     String email = (String) request.getSession().getAttribute("userEmail");
     if (email == null) return "redirect:/users/login";
-    User user = userService.getByUsername(email);
+    User user = userService.getByEmail(email);
     Events event = eventsService.getEventById(eventId);
     event.getAttendees().remove(user);
     eventsService.addEvent(event);
-    return "redirect:/users/events";
+    return "redirect:/users/myActivity";
 }
 @GetMapping("/users/profile")
 public String showProfile(Model model, HttpServletRequest request) {
