@@ -1,7 +1,7 @@
-package com.example.CafeQuestBackendAPI.service;
+package com.example.CafeQuestApiApplication.service;
 
-import com.example.CafeQuestBackendAPI.entity.CoffeeShop;
-import com.example.CafeQuestBackendAPI.repository.CoffeeShopRepository;
+import com.example.CafeQuestApiApplication.entity.CoffeeShop;
+import com.example.CafeQuestApiApplication.repository.CoffeeShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

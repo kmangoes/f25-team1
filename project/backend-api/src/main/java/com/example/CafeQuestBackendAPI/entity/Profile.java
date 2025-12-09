@@ -1,4 +1,4 @@
-package com.example.CafeQuestBackendAPI.entity;
+package com.example.CafeQuestApiApplication.entity;
 
 import jakarta.persistence.*;
 

@@ -1,17 +1,19 @@
-package com.example.CafeQuestBackendAPI.controller;
+package com.example.CafeQuestApiApplication.controller;
 
-import com.example.CafeQuestBackendAPI.entity.User;
-import com.example.CafeQuestBackendAPI.service.UserService;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Map;
+import com.example.CafeQuestApiApplication.entity.User;
+import com.example.CafeQuestApiApplication.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "*")
 public class UserController {
     
     @Autowired

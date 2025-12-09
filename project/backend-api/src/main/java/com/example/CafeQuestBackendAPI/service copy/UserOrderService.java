@@ -1,9 +1,9 @@
-package com.example.CafeQuestBackendAPI.service;
+package com.example.CafeQuestApiApplication.service;
 
-import com.example.CafeQuestBackendAPI.entity.UserOrder;
-import com.example.CafeQuestBackendAPI.entity.User;
-import com.example.CafeQuestBackendAPI.repository.UserOrderRepository;
-import com.example.CafeQuestBackendAPI.repository.UserRepository;
+import com.example.CafeQuestApiApplication.entity.UserOrder;
+import com.example.CafeQuestApiApplication.entity.User;
+import com.example.CafeQuestApiApplication.repository.UserOrderRepository;
+import com.example.CafeQuestApiApplication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

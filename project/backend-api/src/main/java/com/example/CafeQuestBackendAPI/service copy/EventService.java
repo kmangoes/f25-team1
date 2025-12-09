@@ -1,4 +1,4 @@
-package com.example.CafeQuestBackendAPI.service;
+package com.example.CafeQuestApiApplication.service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -7,14 +7,14 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.CafeQuestBackendAPI.entity.CoffeeShop;
-import com.example.CafeQuestBackendAPI.entity.Event;
-import com.example.CafeQuestBackendAPI.entity.EventAttendee;
-import com.example.CafeQuestBackendAPI.entity.User;
-import com.example.CafeQuestBackendAPI.repository.CoffeeShopRepository;
-import com.example.CafeQuestBackendAPI.repository.EventAttendeeRepository;
-import com.example.CafeQuestBackendAPI.repository.EventRepository;
-import com.example.CafeQuestBackendAPI.repository.UserRepository;
+import com.example.CafeQuestApiApplication.entity.CoffeeShop;
+import com.example.CafeQuestApiApplication.entity.Event;
+import com.example.CafeQuestApiApplication.entity.EventAttendee;
+import com.example.CafeQuestApiApplication.entity.User;
+import com.example.CafeQuestApiApplication.repository.CoffeeShopRepository;
+import com.example.CafeQuestApiApplication.repository.EventAttendeeRepository;
+import com.example.CafeQuestApiApplication.repository.EventRepository;
+import com.example.CafeQuestApiApplication.repository.UserRepository;
 
 @Service
 public class EventService {

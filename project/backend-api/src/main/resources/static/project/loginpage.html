@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Quest</title>
+  <style>
+    body {
+      font-family: Cinzel Decorative serif, Cinzel, serif;
+      background: linear-gradient(180deg, #bc9e7d, #4d351c);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+  
+    .container {
+      align-items: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      width: 350px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #4d351c;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4d351c;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1d140a;
+    }
+
+    .toggle-text {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .toggle-text a {
+      color: #4d351c;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .toggle-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <div id="login-form">
+      <h2>Cafe Quest</h2>
+      <input type="email" placeholder="Student Email" required>
+      <input type="password" placeholder="Password" required>
+      <button>Login</button>
+      <div class="toggle-text">
+        First time? <a onclick="showSignup()">Sign Up</a>
+      </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-form" style="display: none;">
+      <h2>Create Account</h2>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Student Email" required>
+      <input type="password" placeholder="Password" required>
+      <button>Sign Up</button>
+      <div class="toggle-text">
+        Already have an account? <a onclick="showLogin()">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSignup() {
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("signup-form").style.display = "block";
+    }
+
+    function showLogin() {
+      document.getElementById("signup-form").style.display = "none";
+      document.getElementById("login-form").style.display = "block";
+    }
+  </script>
+</body>
+</html>
