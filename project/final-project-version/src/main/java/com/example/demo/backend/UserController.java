@@ -2,13 +2,14 @@ package com.example.demo.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.ui.Model;
 
 @Controller
 public class UserController {
@@ -19,10 +20,10 @@ private UserService userService;
 private RecaptchaService recaptchaService;
 
 //show login page
-@GetMapping("/users/login")
+@GetMapping({"/", "/users/login"})
 public String showLoginPage() {
     return "user_login"; //shows user_login.ftlh
-    }
+}
 //handle USER login
 @PostMapping("/users/login")
 public String handleLogin(@RequestParam String email, @RequestParam String password, @RequestParam(name="g-recaptcha-response") String recaptchaResponse, Model model, HttpServletRequest request) {
@@ -37,17 +38,16 @@ public String handleLogin(@RequestParam String email, @RequestParam String passw
     if (!isRecaptchaValid) {
         model.addAttribute("error", "reCAPTCHA verification failed. Please try again.");
         return "user_login"; // Return to login page with error message
-        }
+    }
     if (!isValid) {
         model.addAttribute("error", "Invalid email or password");
         return "user_login"; // Return to login page with error message
-        }
-    else {
+    } else {
         System.out.println("Login successful for email: " + email);
         request.getSession().setAttribute("userEmail", email);
         return "redirect:/users/cafes"; // Redirect to user's cafe dashboard after successful login
-        }
     }
+}
 @PostMapping("/users/{userId}")
 public User updateUser (@PathVariable Long userId, @RequestBody User updatedUser) {
     return userService.updateUser(userId, updatedUser);
