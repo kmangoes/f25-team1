@@ -1,16 +1,16 @@
 package com.example.demo.backend;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpServletRequest;
-
-import org.springframework.ui.Model;
 
 @Controller
 public class EventsController {
@@ -120,15 +120,6 @@ public String leaveEvent(@PathVariable Long eventId, HttpServletRequest request)
     event.getAttendees().remove(user);
     eventsService.addEvent(event);
     return "redirect:/users/myActivity";
-}
-@GetMapping("/users/profile")
-public String showProfile(Model model, HttpServletRequest request) {
-    String email = (String) request.getSession().getAttribute("userEmail");
-    if (email == null) return "redirect:/users/login";
-    User user = userService.getByUsername(email);
-    model.addAttribute("createdEvents", user.getCreatedEvents());
-    model.addAttribute("joinedEvents", user.getAttendingEvents());
-    return "user_activity_dashboard"; // returns user_activity_dashboard.ftlh
 }
 
 }
