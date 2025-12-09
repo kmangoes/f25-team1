@@ -40,8 +40,3 @@
 1. C1 navigates to cafes dashboard from side navigation bar.
 2. C1 leaves a positive review on the cafe they have an upcoming event at.
 
-#### 8. User: Customize Profile: 
-1. After creating profile with bare necessities, C2 goes into their profile and adds further personalization.
-2. After reloading, updates show up in their profile preview on the event they've joined so other users can see what kind of people will be at the event. 
-
-

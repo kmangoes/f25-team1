@@ -1,9 +1,9 @@
 # Cafe Quest - Software Design 
 
-Version 2  
+Version 3  
 Prepared by Chase Solano, Hiwete Teshale  
 Cafe Quest  
-Dec 7, 2025  
+Dec 8, 2025  
 
 Table of Contents
 =================
@@ -21,8 +21,8 @@ Table of Contents
 | Name | Date    | Reason For Changes  | Version   |
 | ---- | ------- | ------------------- | --------- |
 |  Vl  |  10/9   |   Initial Design    |     1     |
-|  V2  |  12/7   |  Finalized Design   |     2     |
-|      |         |                     |           |
+|  V2  |  12/7   | Progressing Design  |     2     |
+|  V3  |  12/8   |    Final Design     |     3     |
 
 ## 1. Product Overview
 Cafe Quest is a web application designed specifically for UNCG students (at this current time) who desire ease of finding third spaces. Cafe Quest offers descriptive suggestions on cafes and study spaces for students to visit, and also schedule group meetups at. All users of Cafe Quest would be UNCG students.
@@ -46,8 +46,6 @@ Providers can add events and delete them.
 #### 2.2.2 Actor: Cafe Quest User
 ##### 2.2.2.1 Log In/Sign Up
 A new user uses their UNCG Student email address to sign up using a valid @uncg.edu email address that is not already in teh system. After logging in, the user should be able to authenticate and have access to their account to see the home page, their profile, and events page.
-##### 2.2.2.2 Customize Profile  
-Users can add personalization to their profiles (their major, favorite coffee, etc.) 
 ##### 2.2.2.3 Browse Coffee Shops
 Users will be able to see coffee shops near UNCG campus along with viewing details.
 ##### 2.2.2.4 Review and Rate Coffee Shops

@@ -1,8 +1,8 @@
-package com.example.CafeQuestBackendAPI.controller;
+package com.example.CafeQuestApiApplication.controller;
 
-import com.example.CafeQuestBackendAPI.entity.Event;
-import com.example.CafeQuestBackendAPI.entity.EventAttendee;
-import com.example.CafeQuestBackendAPI.service.EventService;
+import com.example.CafeQuestApiApplication.entity.Event;
+import com.example.CafeQuestApiApplication.entity.EventAttendee;
+import com.example.CafeQuestApiApplication.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/events")
+@CrossOrigin(origins = "*")
 public class EventController {
     
     @Autowired

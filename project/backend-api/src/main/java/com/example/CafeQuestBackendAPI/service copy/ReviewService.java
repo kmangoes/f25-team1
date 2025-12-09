@@ -1,11 +1,11 @@
-package com.example.CafeQuestBackendAPI.service;
+package com.example.CafeQuestApiApplication.service;
 
-import com.example.CafeQuestBackendAPI.entity.Review;
-import com.example.CafeQuestBackendAPI.entity.CoffeeShop;
-import com.example.CafeQuestBackendAPI.entity.User;
-import com.example.CafeQuestBackendAPI.repository.ReviewRepository;
-import com.example.CafeQuestBackendAPI.repository.CoffeeShopRepository;
-import com.example.CafeQuestBackendAPI.repository.UserRepository;
+import com.example.CafeQuestApiApplication.entity.Review;
+import com.example.CafeQuestApiApplication.entity.CoffeeShop;
+import com.example.CafeQuestApiApplication.entity.User;
+import com.example.CafeQuestApiApplication.repository.ReviewRepository;
+import com.example.CafeQuestApiApplication.repository.CoffeeShopRepository;
+import com.example.CafeQuestApiApplication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
