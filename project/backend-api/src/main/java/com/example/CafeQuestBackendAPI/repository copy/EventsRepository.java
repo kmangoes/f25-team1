@@ -1,4 +1,4 @@
-package com.example.CafeQuestBackendAPI.repository;
+package com.example.CafeQuestApiApplication.repository;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
