@@ -66,12 +66,20 @@ public String showUserSignupForm() {
 //show user activity dashboard
 @GetMapping("/users/myActivity")
 public String showUserActivityDashboard(Model model, HttpServletRequest request) {
-
-
-
-
-    return "user_activity_dashboard"; //shows user_activity_dashboard.ftlh
+    String email = (String) request.getSession().getAttribute("userEmail");
+    if (email == null) {
+        return "redirect:/users/login";
+    }
+    User user = userService.getByEmail(email);
+    if (user == null) {
+        return "redirect:/users/login";
+    }
+    model.addAttribute("user", user);
+    model.addAttribute("createdEvents", user.getCreatedEvents());
+    model.addAttribute("joinedEvents", user.getAttendingEvents());
+    return "user_activity_dashboard";
 }
+
 
 
 

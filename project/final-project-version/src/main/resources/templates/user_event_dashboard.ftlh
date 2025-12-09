@@ -17,7 +17,7 @@
         <!---split into side navbar and main content-->
             <div class="side_navbar">
                 <!--FIXED sidebar to navigate to all other pages-->
-                <p><strong><i class="fa-solid fa-circle-user"></i>  My Activity</strong></p>
+                <a href="/users/myActivity" style="text-decoration:none;"><p style="color: black;"><strong><i class="fa-solid fa-circle-user"></i>  My Activity</strong></p></a>
                 <a href="/users/events" style="text-decoration:none;"><p style="color: black"><strong><i class="fa-solid fa-calendar"></i>   Events</strong></p></a>
                 <a href="/users/cafes" style="text-decoration:none;"><p style="color: black"><strong><i class="fa-solid fa-location-dot"></i>  Cafes</strong></p></a>
                 <hr>
