@@ -28,12 +28,12 @@
                 <!--HEADER CHANGES based on selected option in side navbar-->
                 <header class="top_elem">
                         Upcoming Events     
-                        <button class="edit_btn1" type="button" onclick="window.location.href='/events/createForm'">Add Event</button>
+                        <button class="edit_btn1" type="button" onclick="window.location.href='/users/events/createForm'">Add Event</button>
                 </header>
                 <main> 
-                    <#list eventsList as event> 
+                    <#list events as event> 
                         <div class="event" style="background-color: white;"> <!--MAIN CONTENT MADE UP COMPLETELY OF CARDS-->
-                            <button style="margin-top: 145px;" class="edit_btn2" type="button" onclick="window.location.href='events/delete/${event.eventId}'">Join Event</button>
+                            <button style="margin-top:145px;" class="edit_btn2" type="button" onclick="window.location.href='/users/events/join/${event.eventId}'">Join Event</button>
                             <p class="user_event_items"><strong>Event:</strong> ${event.eventName} </p>
                             <p class="user_event_items"><strong>Type:</strong> ${event.eventType}</p>
                             <p class="user_event_items"><strong>Date:</strong> ${event.eventDate}</p>

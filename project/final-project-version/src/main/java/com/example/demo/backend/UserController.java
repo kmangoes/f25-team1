@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.ui.Model;
 
 @Controller
@@ -24,7 +25,7 @@ public String showLoginPage() {
     }
 //handle USER login
 @PostMapping("/users/login")
-public String handleLogin(@RequestParam String email, @RequestParam String password, @RequestParam(name="g-recaptcha-response") String recaptchaResponse, Model model) {
+public String handleLogin(@RequestParam String email, @RequestParam String password, @RequestParam(name="g-recaptcha-response") String recaptchaResponse, Model model, HttpServletRequest request) {
     boolean isValid = userService.validateLogin(email, password);
     System.out.println("isValid Result: " + isValid);
     System.out.println("Email: " + email);
@@ -43,6 +44,7 @@ public String handleLogin(@RequestParam String email, @RequestParam String passw
         }
     else {
         System.out.println("Login successful for email: " + email);
+        request.getSession().setAttribute("userEmail", email);
         return "redirect:/users/cafes"; // Redirect to user's cafe dashboard after successful login
         }
     }

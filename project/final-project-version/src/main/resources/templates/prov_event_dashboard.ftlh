@@ -28,7 +28,7 @@
                 <!--HEADER CHANGES based on selected option in side navbar-->
                 <header class="top_elem">
                         Upcoming Events     
-                        <button class="edit_btn1" type="button" onclick="window.location.href='/events/createForm'">Add Event</button>
+                        <button class="edit_btn1" type="button" onclick="window.location.href='/provider/events/createForm'">Add Event</button>
                 </header>
                 <main> 
                     <#list eventsList as event> 

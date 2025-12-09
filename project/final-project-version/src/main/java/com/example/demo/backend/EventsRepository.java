@@ -11,7 +11,15 @@ public interface EventsRepository extends JpaRepository<Events, Long> {
 
     @Query("SELECT a FROM Events a WHERE a.eventName LIKE %?1%")
     List<Events> getEventByName(String eventName);
-    @Query("SELECT e FROM Events e WHERE :user NOT MEMBER OF e.attendees")
-    List<Events> findAllWhereUserNotAttending(@Param("user") User user);
+@Query("""
+    SELECT e FROM Events e
+    WHERE 
+        :user NOT MEMBER OF e.attendees
+    AND (
+        e.creator IS NULL 
+        OR e.creator.userId <> :uid
+    )
+""")
+List<Events> findAllWhereUserNotAttending(@Param("user") User user, @Param("uid") Long uid);
 
 }
